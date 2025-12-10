@@ -1,0 +1,19 @@
+# security.txt
+# Our security address for responsible disclosure
+
+Contact: mailto:security@anupparekh.com
+Expires: 2026-12-31T23:59:59.000Z
+Preferred-Languages: en
+Canonical: https://www.anupparekh.com/.well-known/security.txt
+
+# Please report security vulnerabilities responsibly
+# We appreciate your efforts to responsibly disclose your findings
+
+Policy: https://www.anupparekh.com/security-policy
+Acknowledgments: https://www.anupparekh.com/security-acknowledgments
+
+# PGP Key (optional - uncomment and add your key)
+# Encryption: https://www.anupparekh.com/.well-known/pgp-key.txt
+
+# Additional information
+Hiring: https://www.anupparekh.com/#contact

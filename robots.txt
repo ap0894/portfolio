@@ -1,0 +1,29 @@
+# robots.txt for Anup Parekh Portfolio
+# https://www.anupparekh.com/robots.txt
+
+# Allow all search engines to crawl the entire site
+User-agent: *
+Allow: /
+
+# Disallow crawling of specific directories (if needed)
+# Disallow: /admin/
+# Disallow: /private/
+
+# Sitemap location
+Sitemap: https://www.anupparekh.com/sitemap.xml
+
+# Crawl-delay (optional, uncomment if needed)
+# Crawl-delay: 10
+
+# Specific rules for different bots (optional)
+# Google
+User-agent: Googlebot
+Allow: /
+
+# Bing
+User-agent: Bingbot
+Allow: /
+
+# Block bad bots (optional)
+# User-agent: BadBot
+# Disallow: /

@@ -1,0 +1,27 @@
+# humanstxt.org/
+# The humans responsible & technology colophon
+
+# TEAM
+
+    Name: Anup Parekh
+    Role: Product Designer & Strategist
+    Site: https://www.anupparekh.com
+    Location: United Kingdom
+
+# THANKS
+
+    To all the clients and collaborators who made this work possible.
+
+# TECHNOLOGY COLOPHON
+
+    Standards: HTML5, CSS3, JavaScript ES6+
+    Components: Responsive Design, Smooth Scrolling, Form Validation
+    Fonts: Inter (Google Fonts)
+    Tools: Modern Web Standards
+
+# SITE
+
+    Last update: 2025/12/10
+    Language: English
+    Doctype: HTML5
+    IDE: Various
