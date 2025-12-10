@@ -1,0 +1,53 @@
+name: Deploy to FTP Server
+
+# Trigger deployment on push or merge to main branch
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+    types: [closed]
+
+jobs:
+  deploy:
+    name: Deploy to FTP
+    runs-on: ubuntu-latest
+
+    # Only run on merged pull requests or direct pushes to main
+    if: github.event_name == 'push' || (github.event_name == 'pull_request' && github.event.pull_request.merged == true)
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 2
+
+      - name: Deploy to FTP Server
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+        with:
+          # FTP server details (stored in GitHub Secrets)
+          server: ${{ secrets.FTP_SERVER }}
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+
+          # Optional: Specify the remote directory on your FTP server
+          # If your hosting provider requires files in a specific folder (e.g., public_html, www, htdocs)
+          server-dir: ${{ secrets.FTP_SERVER_DIR }}
+
+          # Exclude files/folders from deployment
+          exclude: |
+            **/.git*
+            **/.git*/**
+            **/node_modules/**
+            **/README.md
+            **/.DS_Store
+            **/.idea/**
+            **/.vscode/**
+            **/.claude/**
+
+          # Options
+          dangerous-clean-slate: false  # Set to true to delete all files on server before uploading (use with caution!)
+          dry-run: false  # Set to true to test without actually uploading
+          log-level: standard  # Options: minimal, standard, verbose
