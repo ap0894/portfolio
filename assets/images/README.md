@@ -15,7 +15,7 @@ images/
 ├── favicon-32x32.png
 ├── apple-touch-icon.png
 ├── profile/
-│   └── headshot.jpg
+│   └── headshot.jpeg
 ├── logos/
 │   ├── avalara.svg
 │   ├── amex.svg
