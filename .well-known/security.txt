@@ -9,8 +9,8 @@ Canonical: https://www.anupparekh.com/.well-known/security.txt
 # Please report security vulnerabilities responsibly
 # We appreciate your efforts to responsibly disclose your findings
 
-Policy: https://www.anupparekh.com/security-policy
-Acknowledgments: https://www.anupparekh.com/security-acknowledgments
+#Policy: https://www.anupparekh.com/security-policy
+#Acknowledgments: https://www.anupparekh.com/security-acknowledgments
 
 # PGP Key (optional - uncomment and add your key)
 # Encryption: https://www.anupparekh.com/.well-known/pgp-key.txt
