@@ -7,11 +7,11 @@ PORT=8000
 
 echo "🚀 Starting Portfolio Website..."
 echo "📂 Server running at: http://localhost:$PORT"
-echo "📄 Open: http://localhost:$PORT/index.html"
+echo "📄 Open: http://localhost:$PORT"
 echo ""
 echo "Press Ctrl+C to stop the server"
 echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
 echo ""
 
-# Start Python HTTP server
-python3 -m http.server $PORT
+# Start local dev server with clean URL support
+python3 "$(dirname "$0")/server.py"

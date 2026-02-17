@@ -42,6 +42,30 @@ nav {
     backdrop-filter: blur(20px);
     z-index: 1000;
     border-bottom: 1px solid var(--border);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 100%;
+    padding: 0 2rem;
+}
+
+.nav-logo {
+    position: absolute;
+    left: 2rem;
+    display: flex;
+    align-items: center;
+}
+
+.nav-logo img {
+    height: 48px;
+}
+
+.nav-logo .nav-logo-mobile {
+    display: none;
+}
+
+.nav-logo:hover {
+    opacity: 0.7;
 }
 
 nav ul {
@@ -52,6 +76,7 @@ nav ul {
     padding: 1.5rem 2rem;
     max-width: 1400px;
     margin: 0 auto;
+    text-align: center;
 }
 
 nav a {
@@ -877,9 +902,27 @@ footer a:hover {
 }
 
 @media (max-width: 768px) {
+    .nav-logo {
+        position: static;
+        margin-right: auto;
+    }
+
+    .nav-logo .nav-logo-full {
+        display: none;
+    }
+
+    .nav-logo .nav-logo-mobile {
+        display: block;
+        height: 36px;
+    }
+
+    nav {
+        padding: 0 1.5rem;
+    }
+
     nav ul {
         gap: 1.5rem;
-        padding: 1.25rem 1.5rem;
+        padding: 1.25rem 0;
     }
 
     .hero-text h1 {
