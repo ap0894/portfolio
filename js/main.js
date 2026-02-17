@@ -30,13 +30,22 @@ function initSmoothScroll() {
 // ==========================================================================
 
 /**
- * Set Formsubmit.co endpoint from config
+ * Set Formsubmit.co endpoint from config and handle success state
  */
 function initContactForm() {
     var form = document.getElementById('contactForm');
-    if (!form || typeof CONFIG === 'undefined' || !CONFIG.FORMSUBMIT_KEY) return;
+    var success = document.getElementById('formSuccess');
 
-    form.action = 'https://formsubmit.co/' + CONFIG.FORMSUBMIT_KEY;
+    // Set form action from config
+    if (form && typeof CONFIG !== 'undefined' && CONFIG.FORMSUBMIT_KEY) {
+        form.action = 'https://formsubmit.co/' + CONFIG.FORMSUBMIT_KEY;
+    }
+
+    // Show success message if redirected back after submission
+    if (success && form && new URLSearchParams(window.location.search).has('submitted')) {
+        form.style.display = 'none';
+        success.style.display = 'block';
+    }
 }
 
 // ==========================================================================
