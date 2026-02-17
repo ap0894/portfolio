@@ -35,6 +35,7 @@ build/
 out/
 
 # Environment Files
+js/config.js
 .env
 .env.local
 .env.development.local

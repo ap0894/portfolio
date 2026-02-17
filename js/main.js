@@ -30,62 +30,13 @@ function initSmoothScroll() {
 // ==========================================================================
 
 /**
- * Handle contact form submission
+ * Set Formsubmit.co endpoint from config
  */
 function initContactForm() {
-    const contactForm = document.getElementById('contactForm');
+    var form = document.getElementById('contactForm');
+    if (!form || typeof CONFIG === 'undefined' || !CONFIG.FORMSUBMIT_KEY) return;
 
-    if (contactForm) {
-        contactForm.addEventListener('submit', function(e) {
-            e.preventDefault();
-
-            // Get form values
-            const phone = document.getElementById('phone').value;
-            const email = document.getElementById('email').value;
-            const message = document.getElementById('message').value;
-
-            // Validate form data
-            if (!validateEmail(email)) {
-                alert('Please enter a valid email address.');
-                return;
-            }
-
-            if (!validatePhone(phone)) {
-                alert('Please enter a valid phone number.');
-                return;
-            }
-
-            // Here you would typically send this data to a server
-            // For now, we'll just log it and show a success message
-            console.log('Form submitted:', { phone, email, message });
-
-            // Show success message
-            alert('Thank you for your message! I will get back to you soon.');
-
-            // Reset form
-            this.reset();
-        });
-    }
-}
-
-/**
- * Validate email format
- * @param {string} email - Email address to validate
- * @returns {boolean} - True if valid, false otherwise
- */
-function validateEmail(email) {
-    const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    return re.test(email);
-}
-
-/**
- * Validate phone format (basic validation)
- * @param {string} phone - Phone number to validate
- * @returns {boolean} - True if valid, false otherwise
- */
-function validatePhone(phone) {
-    const re = /^[\d\s\-\+\(\)]+$/;
-    return phone.length >= 10 && re.test(phone);
+    form.action = 'https://formsubmit.co/' + CONFIG.FORMSUBMIT_KEY;
 }
 
 // ==========================================================================

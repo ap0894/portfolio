@@ -44,14 +44,19 @@
         <priority>0.6</priority>
     </url>
 
-    <!-- Add individual case study pages when created -->
-    <!--
+    <!-- Case Study Pages -->
     <url>
         <loc>https://www.anupparekh.com/refsix</loc>
-        <lastmod>2025-12-10</lastmod>
+        <lastmod>2026-02-17</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.9</priority>
     </url>
-    -->
+
+    <url>
+        <loc>https://www.anupparekh.com/avalara</loc>
+        <lastmod>2026-02-17</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.9</priority>
+    </url>
 
 </urlset>

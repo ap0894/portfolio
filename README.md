@@ -11,19 +11,27 @@ This is a modern, responsive portfolio website built with clean HTML5, CSS3, and
 ```
 portfolio/
 ├── index.html              # Main HTML file
-├── .htaccess              # Apache server configuration
-├── robots.txt             # Search engine crawling rules
-├── sitemap.xml            # XML sitemap for SEO
-├── humans.txt             # Credits and team information
+├── refsix.html             # REFSIX case study page
+├── avalara.html            # Avalara case study page
+├── server.py               # Local dev server (clean URL support)
+├── .htaccess               # Apache server configuration
+├── robots.txt              # Search engine crawling rules
+├── sitemap.xml             # XML sitemap for SEO
+├── humans.txt              # Credits and team information
 ├── css/
-│   └── style.css          # Main stylesheet
+│   └── style.css           # Main stylesheet
 ├── js/
-│   └── main.js            # JavaScript functionality
+│   ├── main.js             # JavaScript functionality
+│   ├── config.js           # Environment config (gitignored)
+│   └── config.example.js   # Config template
 ├── assets/
-│   └── images/            # Image assets directory
+│   └── images/
+│       ├── casestudies/    # Case study images
+│       ├── logos/           # Company logos
+│       └── profile/         # Profile images
 └── .well-known/
-    ├── security.txt       # Security contact information
-    └── change-password    # Password change URL
+    ├── security.txt        # Security contact information
+    └── change-password     # Password change URL
 ```
 
 ## Features
@@ -40,10 +48,9 @@ portfolio/
 
 1. **Hero**: Introduction and profile image
 2. **Worked With**: Logo showcase of companies and brands
-3. **Case Studies**: Detailed project case studies
+3. **Case Studies**: Detailed project case studies (REFSIX, Avalara)
 4. **Testimonials**: Client testimonials and reviews
-5. **Projects**: Recent work showcase
-6. **Contact**: Contact form for inquiries
+5. **Contact**: Contact form for inquiries
 
 ## Technologies Used
 
@@ -61,17 +68,26 @@ portfolio/
 - Edge (latest)
 - Mobile browsers
 
+## Local Development
+
+1. Clone the repository
+2. Copy `js/config.example.js` to `js/config.js` and add your Formsubmit key
+3. Run the local dev server: `python3 server.py`
+4. Open `http://localhost:8000`
+
+The local server supports clean URLs (e.g. `/refsix` serves `refsix.html`), matching the `.htaccess` rewrite rules on production.
+
 ## Installation
 
 1. Upload all files to your web hosting root directory
 2. Ensure your server supports Apache with mod_rewrite enabled
-3. Update the domain name in:
+3. Create `js/config.js` with your production Formsubmit key (see `config.example.js`)
+4. Update the domain name in:
    - `sitemap.xml`
    - `robots.txt`
    - `.well-known/security.txt`
    - `index.html` (Open Graph and canonical URLs)
-4. Add your own favicon files to the root directory
-5. Update contact email and any placeholder content
+5. Add your own favicon files to the root directory
 
 ## Configuration
 
@@ -84,10 +100,11 @@ Update the following files with your actual domain:
 
 ### Contact Form
 
-The contact form currently logs to console. To make it functional, you'll need to:
-1. Set up a backend endpoint to handle form submissions
-2. Update the form handler in `js/main.js`
-3. Consider using services like Formspree, Netlify Forms, or your own backend
+The contact form uses [Formsubmit.co](https://formsubmit.co/) to send submissions via email. Configuration:
+
+1. Copy `js/config.example.js` to `js/config.js`
+2. Replace `your-formsubmit-key-here` with your Formsubmit key
+3. `config.js` is gitignored so each environment (local, production) can use its own key
 
 ### Analytics
 
@@ -137,7 +154,7 @@ Security features implemented:
 
 ## License
 
-Copyright © 2025 Anup Parekh. All rights reserved.
+Copyright © 2026 Anup Parekh. All rights reserved.
 
 ## Contact
 

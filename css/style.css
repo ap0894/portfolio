@@ -148,9 +148,7 @@ nav a:hover {
 
 .worked-with {
     padding: 5rem 2rem;
-    background: #fafafa;
-    border-top: 1px solid var(--border);
-    border-bottom: 1px solid var(--border);
+    background: #000000;
 }
 
 .worked-with-content {
@@ -162,6 +160,7 @@ nav a:hover {
     font-size: 0.9rem;
     font-weight: 500;
     text-transform: uppercase;
+    color: #ffffff;
     letter-spacing: 0.1em;
     color: var(--text-secondary);
     margin-bottom: 3rem;
@@ -178,13 +177,6 @@ nav a:hover {
 
 .logo-item {
     height: 40px;
-    opacity: 0.4;
-    transition: opacity 0.2s;
-    filter: grayscale(100%);
-}
-
-.logo-item:hover {
-    opacity: 0.7;
 }
 
 /* Section Styles
@@ -218,6 +210,12 @@ section > p {
     grid-template-columns: 1fr 1fr;
     gap: 4rem;
     margin-top: 4rem;
+}
+
+a.case-study-card {
+    text-decoration: none;
+    color: inherit;
+    display: block;
 }
 
 .case-study-card {
@@ -428,6 +426,7 @@ section > p {
     color: white;
 }
 
+
 #contact h2,
 #contact p {
     color: white;
@@ -504,7 +503,8 @@ footer {
     color: rgba(255, 255, 255, 0.6);
     text-align: center;
     padding: 3rem 2rem;
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    margin-top: 4rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
     font-size: 0.9rem;
 }
 
@@ -516,6 +516,291 @@ footer a {
 
 footer a:hover {
     opacity: 0.7;
+}
+
+/* Case Study Pages
+   ========================================================================== */
+
+.cs-hero {
+    padding: 10rem 2rem 4rem;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.cs-back-link {
+    display: inline-block;
+    text-decoration: none;
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    font-weight: 500;
+    margin-bottom: 2rem;
+    transition: color 0.2s;
+}
+
+.cs-back-link:hover {
+    color: var(--text-primary);
+}
+
+.cs-tag {
+    display: inline-block;
+    padding: 0.4rem 1rem;
+    background: #f5f5f5;
+    color: var(--text-secondary);
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 500;
+    margin-bottom: 1.5rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.cs-hero h1 {
+    font-size: 3rem;
+    font-weight: 600;
+    line-height: 1.15;
+    letter-spacing: -0.02em;
+    margin-bottom: 1.5rem;
+}
+
+.cs-hero p {
+    font-size: 1.15rem;
+    line-height: 1.7;
+    color: var(--text-secondary);
+}
+
+/* Case Study Hero Image */
+
+.cs-hero-image {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.cs-hero-image img {
+    width: 100%;
+    border-radius: 12px;
+}
+
+/* Case Study Stats */
+
+.cs-stats {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+    padding: 3rem 2rem;
+    max-width: 900px;
+    margin: 0 auto;
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+}
+
+.cs-stat {
+    text-align: center;
+}
+
+.cs-stat-value {
+    display: block;
+    font-size: 2rem;
+    font-weight: 600;
+    letter-spacing: -0.02em;
+    color: var(--text-primary);
+    margin-bottom: 0.25rem;
+}
+
+.cs-stat-label {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    line-height: 1.4;
+}
+
+/* Case Study Content */
+
+.cs-content {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.cs-section {
+    padding: 3rem 0;
+}
+
+.cs-section h2 {
+    font-size: 2rem;
+    font-weight: 600;
+    letter-spacing: -0.02em;
+    margin-bottom: 1.5rem;
+}
+
+.cs-section h3 {
+    font-size: 1.35rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.cs-section p {
+    color: var(--text-secondary);
+    font-size: 1.05rem;
+    line-height: 1.7;
+    margin-bottom: 1.25rem;
+}
+
+.cs-section ul {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 1.5rem;
+}
+
+.cs-section ul li {
+    color: var(--text-secondary);
+    font-size: 1.05rem;
+    line-height: 1.7;
+    padding-left: 1.5rem;
+    position: relative;
+    margin-bottom: 0.5rem;
+}
+
+.cs-section ul li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0.7em;
+    width: 6px;
+    height: 6px;
+    background: var(--text-secondary);
+    border-radius: 50%;
+}
+
+/* Case Study Callout */
+
+.cs-callout {
+    border-left: 3px solid var(--text-primary);
+    padding: 1.5rem 2rem;
+    margin: 2rem 0;
+    background: #fafafa;
+    border-radius: 0 8px 8px 0;
+}
+
+.cs-callout p {
+    color: var(--text-primary);
+    font-size: 1.1rem;
+    font-weight: 500;
+    line-height: 1.6;
+    margin-bottom: 0;
+}
+
+/* Case Study Pillars */
+
+.cs-pillars {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+    margin: 2rem 0;
+}
+
+.cs-pillar {
+    padding: 2rem;
+    background: #fafafa;
+    border-radius: 12px;
+    border: 1px solid var(--border);
+}
+
+.cs-pillar h4 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 0.75rem;
+}
+
+.cs-pillar p {
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 0;
+}
+
+/* Case Study Learnings */
+
+.cs-learnings {
+    background: var(--bg-dark);
+    padding: 5rem 2rem;
+    margin: 3rem 0 0;
+}
+
+.cs-learnings-inner {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.cs-learnings h2 {
+    color: white;
+    font-size: 2rem;
+    font-weight: 600;
+    letter-spacing: -0.02em;
+    margin-bottom: 3rem;
+}
+
+.cs-learning-item {
+    margin-bottom: 2.5rem;
+    padding-left: 3rem;
+    position: relative;
+}
+
+.cs-learning-item::before {
+    content: attr(data-num);
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.3);
+}
+
+.cs-learning-item h3 {
+    color: white;
+    font-size: 1.15rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.cs-learning-item p {
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+/* Case Study Next CTA */
+
+.cs-next {
+    text-align: center;
+    padding: 5rem 2rem;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.cs-next p {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    font-weight: 500;
+    margin-bottom: 1rem;
+}
+
+.cs-next a {
+    font-size: 1.75rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    text-decoration: none;
+    letter-spacing: -0.02em;
+    transition: opacity 0.2s;
+}
+
+.cs-next a:hover {
+    opacity: 0.6;
+}
+
+.cs-next a::after {
+    content: ' →';
 }
 
 /* Placeholder Styling
@@ -560,6 +845,18 @@ footer a:hover {
     .testimonials-grid {
         grid-template-columns: 1fr;
     }
+
+    .cs-hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .cs-stats {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .cs-pillars {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
 
 @media (max-width: 768px) {
@@ -586,6 +883,40 @@ footer a:hover {
     }
 
     .logo-grid {
-        gap: 3rem;
+        flex-direction: column;
+        gap: 2.5rem;
+    }
+
+    .cs-hero {
+        padding: 7rem 1.5rem 3rem;
+    }
+
+    .cs-hero h1 {
+        font-size: 2rem;
+    }
+
+    .cs-stats {
+        grid-template-columns: repeat(2, 1fr);
+        padding: 2rem 1.5rem;
+    }
+
+    .cs-stat-value {
+        font-size: 1.5rem;
+    }
+
+    .cs-content {
+        padding: 0 1.5rem;
+    }
+
+    .cs-pillars {
+        grid-template-columns: 1fr;
+    }
+
+    .cs-learnings {
+        padding: 3rem 1.5rem;
+    }
+
+    .cs-next a {
+        font-size: 1.35rem;
     }
 }

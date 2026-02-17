@@ -98,7 +98,7 @@
             <li><a href="#home">Home</a></li>
             <li><a href="#casestudies">Case Studies</a></li>
             <li><a href="#testimonials">Testimonials</a></li>
-            <li><a href="#projects">Projects</a></li>
+            <!-- <li><a href="#projects">Projects</a></li> -->
             <li><a href="#contact">Contact</a></li>
         </ul>
     </nav>
@@ -126,10 +126,10 @@
         <div class="worked-with-content">
             <h2>Worked with</h2>
             <div class="logo-grid">
-                <img src="assets/images/logos/avalara.svg" alt="Avalara" class="logo-item" onerror="this.style.display='none'">
-                <img src="assets/images/logos/amex.svg" alt="American Express" class="logo-item" onerror="this.style.display='none'">
-                <img src="assets/images/logos/refsix-logo.png" alt="REFSIX" class="logo-item" onerror="this.style.display='none'">
-                <img src="assets/images/logos/Scorza_Wordmark_White_Text.png" alt="Scorza" class="logo-item" onerror="this.style.display='none'">
+                <a href="https://www.avalara.com/gb/en-gb/index.html" target="_blank" rel="noopener noreferrer"><img src="assets/images/logos/avalara.svg" alt="Avalara" class="logo-item" onerror="this.style.display='none'"></a>
+                <a href="https://www.americanexpress.com/en-gb/" target="_blank" rel="noopener noreferrer"><img src="assets/images/logos/amex.png" alt="American Express" class="logo-item" onerror="this.style.display='none'"></a>
+                <a href="https://refsix.com/" target="_blank" rel="noopener noreferrer"><img src="assets/images/logos/refsix-logo.png" alt="REFSIX" class="logo-item" onerror="this.style.display='none'"></a>
+                <a href="https://scorza.com/" target="_blank" rel="noopener noreferrer"><img src="assets/images/logos/Scorza_Wordmark_White_Text.png" alt="Scorza" class="logo-item" onerror="this.style.display='none'"></a>
             </div>
         </div>
     </div>
@@ -137,34 +137,32 @@
     <!-- Case Studies Section -->
     <section id="casestudies">
         <h2>Case Studies</h2>
-        <p>Solving user & business problems since last 15+ years. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        <p>From scaling a referee app into a wearable platform to transforming manual tax compliance into self-serve software — here's how I've turned complex problems into products that work.</p>
 
         <div class="case-studies-grid">
-            <div class="case-study-card">
-                <div class="case-study-image-wrapper">
-                    <img src="https://anupparekhcom.wstd.io/cgi/image/refsix_journey_VydhZ96QV1u55zalTUz9s.png" alt="REFSIX Journey" class="case-study-image" onerror="this.parentElement.classList.add('placeholder-img'); this.style.display='none'">
-                    <img src="https://anupparekhcom.wstd.io/cgi/image/REFSIX-logo-whitebackground_hEX4th8efLJ0K2aJn0Zun.svg" alt="REFSIX" class="case-study-logo" onerror="this.style.display='none'">
+            <a href="/refsix" class="case-study-card">
+                <div class="case-study-image-wrapper" style="background:#1a1a1a">
+                    <img src="assets/images/casestudies/refsix-hero.png" alt="REFSIX Product Mission" class="case-study-image" style="object-fit:contain" onerror="this.parentElement.classList.add('placeholder-img'); this.style.display='none'">
                 </div>
                 <div class="case-study-content">
                     <span class="case-study-tag">SportTech</span>
                     <h3>Product Strategy</h3>
                     <p>How I led the strategy to evolve a profitable referee app into a wearable for grassroots footballers, taking the product from concept through hardware development to market launch.</p>
-                    <a href="/refsix" class="case-study-link">View case study</a>
+                    <span class="case-study-link">View case study</span>
                 </div>
-            </div>
+            </a>
 
-            <div class="case-study-card">
+            <a href="/avalara" class="case-study-card">
                 <div class="case-study-image-wrapper">
-                    <img src="https://anupparekhcom.wstd.io/cgi/image/alan-quirvan-igcMIwAVAS4-unsplash_QIfP13CRbB2FEB6kth6cK.jpg" alt="Avalara" class="case-study-image" onerror="this.parentElement.classList.add('placeholder-img'); this.style.display='none'">
-                    <img src="https://anupparekhcom.wstd.io/cgi/image/logo_1_CZXJsvsI9hZfJTw2emxbl.svg" alt="Avalara" class="case-study-logo" onerror="this.style.display='none'">
+                    <img src="assets/images/casestudies/avalara-card.png" alt="Avalara self-serve portal" class="case-study-image" style="object-fit:contain;padding:2rem" onerror="this.parentElement.classList.add('placeholder-img'); this.style.display='none'">
                 </div>
                 <div class="case-study-content">
                     <span class="case-study-tag">TaxTech</span>
                     <h3>Automating the complex</h3>
                     <p>How I transformed a manual, email-heavy VAT compliance process into a self-serve platform, giving small businesses a way to handle multi-country tax registration and reporting themselves.</p>
-                    <a href="/" class="case-study-link">View case study</a>
+                    <span class="case-study-link">View case study</span>
                 </div>
-            </div>
+            </a>
         </div>
     </section>
 
@@ -200,67 +198,24 @@
         </div>
     </section>
 
-    <!-- Projects Section -->
+    <!-- Projects Section (hidden for now)
     <section id="projects">
-        <h2>Recent Work</h2>
-        <p>Solving user & business problems since last 15+ years. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-
-        <div class="projects-grid">
-            <div class="project-card">
-                <div class="project-image-wrapper placeholder-img">
-                    <img src="https://anupparekhcom.wstd.io/cgi/image/ux-store-ukeUH3KbMWU-unsplash_(1)_O4QinEBfJM4QtbZqgomLl.jpg" alt="Project 1" class="project-image" onerror="this.style.display='none'">
-                </div>
-                <div class="project-content">
-                    <h3>Work name here</h3>
-                    <p>Labore et dolore magna aliqua. sed do eiusmod tempor incididunt ut labore et dolore magna.</p>
-                    <a href="/" class="project-link">Know more</a>
-                </div>
-            </div>
-
-            <div class="project-card">
-                <div class="project-image-wrapper placeholder-img">
-                    <img src="https://anupparekhcom.wstd.io/cgi/image/manny-pantoja-jaHvDkELPKU-unsplash_Bib_KYEDhRN_mwfhkyWPv.jpg" alt="Project 2" class="project-image" onerror="this.style.display='none'">
-                </div>
-                <div class="project-content">
-                    <h3>Work name here</h3>
-                    <p>Labore et dolore magna aliqua. sed do eiusmod tempor incididunt ut labore et dolore magna.</p>
-                    <a href="/" class="project-link">Know more</a>
-                </div>
-            </div>
-
-            <div class="project-card">
-                <div class="project-image-wrapper placeholder-img">
-                    <img src="https://anupparekhcom.wstd.io/cgi/image/manny-pantoja-jaHvDkELPKU-unsplash_Bib_KYEDhRN_mwfhkyWPv.jpg" alt="Project 3" class="project-image" onerror="this.style.display='none'">
-                </div>
-                <div class="project-content">
-                    <h3>Work name here</h3>
-                    <p>Labore et dolore magna aliqua. sed do eiusmod tempor incididunt ut labore et dolore magna.</p>
-                    <a href="/" class="project-link">Know more</a>
-                </div>
-            </div>
-
-            <div class="project-card">
-                <div class="project-image-wrapper placeholder-img">
-                    <img src="https://anupparekhcom.wstd.io/cgi/image/manny-pantoja-jaHvDkELPKU-unsplash_Bib_KYEDhRN_mwfhkyWPv.jpg" alt="Project 4" class="project-image" onerror="this.style.display='none'">
-                </div>
-                <div class="project-content">
-                    <h3>Work name here</h3>
-                    <p>Labore et dolore magna aliqua. sed do eiusmod tempor incididunt ut labore et dolore magna.</p>
-                    <a href="/" class="project-link">Know more</a>
-                </div>
-            </div>
-        </div>
+        ...
     </section>
+    -->
 
     <!-- Contact Section -->
     <section id="contact">
         <h2>Get In Touch</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        <p>Looking for a product leader who can turn ambiguity into shipped products? Let's talk about what you're building.</p>
 
-        <form class="contact-form" id="contactForm">
+        <form class="contact-form" id="contactForm" action="https://formsubmit.co/2bdf24e53f2e327b8143ae8cb4862d9d" method="POST">
+            <input type="hidden" name="_subject" value="New portfolio enquiry">
+            <input type="hidden" name="_next" value="https://www.anupparekh.com/#contact">
+            <input type="text" name="_honey" style="display:none">
             <div class="form-group">
-                <label for="phone">Phone</label>
-                <input type="tel" id="phone" name="phone" required>
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" required>
             </div>
             <div class="form-group">
                 <label for="email">Email</label>
@@ -276,10 +231,11 @@
 
     <!-- Footer -->
     <footer>
-        <p>Anup Parekh @ 2025. All rights reserved.</p>
+        <p>Anup Parekh @ 2026. All rights reserved.</p>
     </footer>
 
     <!-- JavaScript -->
+    <script src="js/config.js"></script>
     <script src="js/main.js"></script>
 </body>
 </html>
