@@ -24,6 +24,10 @@ jobs:
         with:
           fetch-depth: 2
 
+      - name: Generate config.js
+        run: |
+          echo "var CONFIG = { FORMSUBMIT_KEY: '${{ secrets.FORMSUBMIT_KEY }}' };" > js/config.js
+
       - name: Deploy to FTP Server
         uses: SamKirkland/FTP-Deploy-Action@v4.3.5
         with:
@@ -46,6 +50,8 @@ jobs:
             **/.idea/**
             **/.vscode/**
             **/.claude/**
+            **/server.py
+            **/js/config.example.js
 
           # Options
           dangerous-clean-slate: false  # Set to true to delete all files on server before uploading (use with caution!)
