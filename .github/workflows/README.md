@@ -10,8 +10,9 @@ The `deploy.yml` workflow automatically deploys your website to an FTP server wh
 
 1. **Trigger**: Runs on push to `main` branch or when a pull request is merged
 2. **Checkout**: Downloads your repository code
-3. **Deploy**: Uploads files to your FTP server
-4. **Exclude**: Automatically excludes Git files, node_modules, and development files
+3. **Generate config**: Creates `js/config.js` from the `FORMSUBMIT_KEY` secret
+4. **Deploy**: Uploads files to your FTP server
+5. **Exclude**: Automatically excludes Git files, node_modules, dev-only files (`server.py`, `config.example.js`)
 
 ### Setup Instructions
 
@@ -37,6 +38,7 @@ Contact your web hosting provider to get:
    | `FTP_USERNAME` | Your FTP username | `user@yoursite.com` |
    | `FTP_PASSWORD` | Your FTP password | `your-password-here` |
    | `FTP_SERVER_DIR` | Remote directory path | `/public_html/` or `/` |
+   | `FORMSUBMIT_KEY` | Formsubmit.co hashed key for contact form | `abc123def456...` |
 
    **Important**: For `FTP_SERVER_DIR`:
    - Must end with `/` (e.g., `/public_html/`)
